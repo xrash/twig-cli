@@ -1,0 +1,15 @@
+{
+    "name": "xrash/twig-cli",
+    "license": "MIT",
+    "type": "project",
+    "description": "CLI for the Twig template engine",
+
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+
+    "require": {
+	"symfony/console": "dev-master",
+	"twig/twig": "dev-master"
+    }
+}

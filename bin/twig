@@ -1,0 +1,23 @@
+#!/usr/bin/env php
+<?php
+
+define('__CLI_NAME', $argv[0]);
+set_time_limit(0);
+set_error_handler(function($severity, $message, $file, $line) {
+    if (!(error_reporting() & $severity)) {
+        return;
+    }
+
+    throw new \ErrorException($message, 0, $severity, $file, $line);
+});
+
+$loader = require 'vendor/autoload.php';
+
+use Rash\TwigCli\ConsoleApplication;
+use Rash\TwigCli\Commands\CompileCommand;
+
+$console = new ConsoleApplication();
+
+$console->add(new CompileCommand());
+
+$console->run();

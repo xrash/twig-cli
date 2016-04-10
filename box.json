@@ -1,0 +1,12 @@
+{
+    "finder": [
+        {
+            "name": [ "*.php" ],
+            "in": [ "vendor", "src" ]
+        }
+    ],
+    "main": "bin/twig",
+    "output": "bin/twig.phar",
+    "stub": true
+}
+
